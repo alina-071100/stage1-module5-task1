@@ -20,7 +20,6 @@ public class InterfaceCreator {
                 .allMatch(s -> Character.isUpperCase(s.toCharArray()[0]));
 
     }
-
     public Consumer<List<Integer>> addEvenValuesAtTheEnd() {
 
         return integers -> integers
@@ -35,7 +34,6 @@ public class InterfaceCreator {
                 .filter(s -> s.split(" ").length > 3)
                 .toList();
     }
-
     public Function<List<String>, Map<String, Integer>> stringSize() {
         return x -> x.stream().collect(Collectors.toMap(String::toString, String::length));
     }
