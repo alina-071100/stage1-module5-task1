@@ -10,6 +10,7 @@ import java.util.*;
 import java.util.stream.Stream;
 
 public class InterfaceCreatorTest {
+
     public static Stream<Arguments> predicateTestCases() {
         return Stream.of(
                 Arguments.of("ListWithNumber",
