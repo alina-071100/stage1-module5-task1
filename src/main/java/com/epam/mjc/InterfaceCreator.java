@@ -24,7 +24,7 @@ public class InterfaceCreator {
 
         return integers -> integers
                 .addAll(integers.stream()
-                        .filter(n -> n % 2 == 0).toList());
+                        .filter(n -> n % 2 == 0).collect(Collectors.toList()));
     }
 
     public Supplier<List<String>> filterCollection(List<String> values) {
@@ -32,13 +32,13 @@ public class InterfaceCreator {
                 .filter(s -> Character.isUpperCase(s.toCharArray()[0]))
                 .filter(s -> s.endsWith("."))
                 .filter(s -> s.split(" ").length > 3)
-                .toList();
+                .collect(Collectors.toList());
     }
     public Function<List<String>, Map<String, Integer>> stringSize() {
         return x -> x.stream().collect(Collectors.toMap(String::toString, String::length));
     }
 
     public BiFunction<List<Integer>, List<Integer>, List<Integer>> concatList() {
-        return (list1, list2) -> Stream.concat(list1.stream(), list2.stream()).toList();
+        return (list1, list2) -> Stream.concat(list1.stream(), list2.stream()).collect(Collectors.toList());
     }
 }
