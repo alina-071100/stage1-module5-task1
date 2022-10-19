@@ -50,6 +50,8 @@ public class InterfaceCreatorTest {
                                                         "Hello world in Java.",
                                                         "MJC is a great school."))),
 
+
+
                 Arguments.of("FromListWithOneIncorrectString",
                         new ArrayList<>(Arrays. asList("This is a good way to learn Java Functional Interfaces.",
                                                        "hello world in Java.",
