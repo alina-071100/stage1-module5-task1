@@ -15,7 +15,6 @@ public class InterfaceCreator {
 
     public Predicate<List<String>> isValuesStartWithUpperCase() {
 
-
         return strings -> strings.stream()
                 .allMatch(s -> Character.isUpperCase(s.toCharArray()[0]));
 
